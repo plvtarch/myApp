@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 
 
 function App() {
-  
-  const sizeTypes = ['Российский', 'Американский'];
-  const russianSizesTable = ['38', '39', '40', '41', '42'];
-  const americanSizesTable = ['7', '7.5', '8', '8.5', '9'];
+    const sizeTypes = ['Российский', 'Американский', 'Европейский'];
+  const russianSizesTable = ['38', '40', '42', '44', '46'];
+  const americanSizesTable = ['0', '2', '4', '6', '8'];
+  const euSizesTable = ['XXS', 'XS', 'S', 'M', 'L'];
 
   const [sizeType, setSizeType] = useState('Российский');
   const [sizeValue, setSizeValue] = useState(0);
@@ -17,6 +17,10 @@ function App() {
     setSizeType(e.target.value);
     if (e.target.value === 'Российский') {
       setSizeTable(russianSizesTable);
+    }
+    else if(e.target.value === 'Европейский')
+    {
+      setSizeTable(euSizesTable);
     } else {
       setSizeTable(americanSizesTable);
     }
