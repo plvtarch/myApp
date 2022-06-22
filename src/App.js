@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
     const sizeTypes = ['Российский', 'Американский', 'Европейский'];
+
   const russianSizesTable = ['38', '40', '42', '44', '46'];
   const americanSizesTable = ['0', '2', '4', '6', '8'];
   const euSizesTable = ['XXS', 'XS', 'S', 'M', 'L'];
